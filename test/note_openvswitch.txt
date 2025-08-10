@@ -1,3 +1,0 @@
-use this command
-sudo apt-get install mininet openvswitch-testcontroller
-to install openvswitch...!!!

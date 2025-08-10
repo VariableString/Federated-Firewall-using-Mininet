@@ -1,0 +1,40 @@
+system:
+  log_level: INFO
+  debug_mode: false
+  
+mininet:
+  num_clients: 3
+  controller_port: 6633
+  switch_protocol: OpenFlow13
+  
+phases:
+  learning_rounds: 5
+  testing_rounds: 2
+  learning_duration: 60
+  testing_duration: 30
+  
+federated:
+  local_epochs: 2
+  batch_size: 32
+  min_batch_size: 4
+  aggregation_interval: 30
+  
+hyperparameters:
+  learning_rates: [0.01, 0.005]
+  hidden_sizes: [64, 32]
+  dropout_rates: [0.1, 0.2]
+  
+model:
+  input_size: 10
+  output_size: 2
+  
+security:
+  threat_threshold: 0.6
+  block_threshold: 0.7
+  enable_logging: true
+  
+firewall:
+  enable_blocking: false
+  whitelist_ips: []
+  blacklist_ports: [4444, 6666, 1234]
+  max_blocked_ips: 100
